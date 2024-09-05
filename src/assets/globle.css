@@ -1,0 +1,37 @@
+#app {
+  position: relative
+}
+
+router-link {
+  text-decoration: none;
+}
+
+.btnlang {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+}
+
+.btndark {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+}
+
+.custom-class {
+  --el-tag-bg-color: red;
+}
+
+.el-page-header__back {
+  display: none;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.light-theme {
+  background-color: #fff;
+  color: #000;
+}
