@@ -15,7 +15,7 @@
       <template #default="scope">
         <div style="display: flex; align-items: center">
           <span v-show="!scope.row.isEdit" style="margin-left: 10px">{{ scope.row.username }}</span>
-          <el-input ref="inputTitle" @blur="handleBlur(scope.$index)" v-show="scope.row.isEdit" v-model="roleData[scope.$index].name " style="width: 240px"/>
+          <el-input ref="inputTitle" @blur="handleBlur(scope.$index)" v-show="scope.row.isEdit" v-model="roleData[scope.$index].username " style="width: 240px"/>
         </div>
       </template>
     </el-table-column>
@@ -23,7 +23,7 @@
       <template #default="scope">
        <div style="display: flex; align-items: center">
           <span v-show="!scope.row.isEdit" style="margin-left: 10px">{{ scope.row.email}}</span>
-          <el-input  @blur="handleBlur(scope.$index)" v-show="scope.row.isEdit" v-model="roleData[scope.$index].age " style="width: 240px"/>
+          <el-input  @blur="handleBlur(scope.$index)" v-show="scope.row.isEdit" v-model="roleData[scope.$index].email " style="width: 240px"/>
         </div>
       </template>
     </el-table-column>
@@ -32,7 +32,7 @@
       <template #default="scope">
        <div style="display: flex; align-items: center">
           <span v-show="!scope.row.isEdit" style="margin-left: 10px">{{ scope.row.role }}</span>
-          <el-input  @blur="handleBlur(scope.$index)" v-show="scope.row.isEdit" v-model="roleData[scope.$index].age " style="width: 240px"/>
+          <el-input  @blur="handleBlur(scope.$index)" v-show="scope.row.isEdit" v-model="roleData[scope.$index].role " style="width: 240px"/>
         </div>
       </template>
     </el-table-column>
@@ -117,7 +117,7 @@ const handleCurrentChange = (val) => {
 function adddata(){
 const newdata={
   id:nanoid(),
-  name:this.input,
+  username:input.value,
   age:''
 }
   roleData.unshift(newdata)
@@ -135,9 +135,9 @@ const handleEdit = (index) => {
 
 function handleBlur(index){
   roleData[index].isEdit=false
-  if(!roleData[index].name.trim()||!roleData[index].age.trim()){
+  if(!roleData[index].username.trim()||!roleData[index].role.trim()||!roleData[index].email.trim()){
     alert('输入不能为空')
-    roleData[index].isEdit=true
+    roleData[index].isEdit=reactive(true)
   }
 }
 
