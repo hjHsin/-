@@ -1,26 +1,23 @@
-body {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --button-background: #409EFF;
-  --button-text: #ffffff;
-  --switch-background: #409EF;
-  --switch-text: #ffffff;
-}
-
 /* 黑夜模式 */
-body.dark-mode {
-  --background-color: #333333;
-  --text-color: #ffffff;
+.dark-mode {
+  background-color: #333333;
+  color: #ffffff;
 }
 
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
+.dark-mode .el-aside {
+  background-color: #333333;
 }
 
+.dark-mode .el-button {
+  background-color: #333333;
+  color: #ffffff;
+}
 
-.el-card.is-always-shadow,
-.header[data-v-2dc54a20] {
-  background-color: var(--background-color);
-  color: var(--text-color);
+.dark-mode .el-card {
+  background-color: #333333;
+}
+
+.dark-mode .header {
+  background-color: #333333;
+  color: #ffffff;
 }

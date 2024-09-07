@@ -83,8 +83,7 @@ const handleSubmit=()=>{
  
   width: 100%;
    height: 100vh; 
-  background-image: url(../assets/image/loginimage.webp);
-  
+   background-image: url(../assets/image/loginimage.webp);
 }
 
 .logincard {

@@ -173,27 +173,39 @@ watch(roleData,(value)=>{
 </script>
 
 <style>
-*{
+* {
   margin: 0;
-  padding:0;
+  padding: 0;
 }
-.el-input--small .el-input__wrapper,.btn {
-  height:30px;
+
+.el-input--small .el-input__wrapper,
+.btn {
+  height: 30px;
 }
+
 .cell {
   font-size: 16px;
 }
-.el-pagination--small .btn-next, .el-pagination--small .btn-prev, .el-pagination--small .el-pager li {
- font-size: 16px;
+
+.el-pagination--small .btn-next,
+.el-pagination--small .btn-prev,
+.el-pagination--small .el-pager li {
+  font-size: 16px;
 }
-.demo-pagination-block + .demo-pagination-block {
+
+.demo-pagination-block+.demo-pagination-block {
   margin-top: 10px;
 }
+
 .demo-pagination-block .demonstration {
   margin-bottom: 16px;
 }
+
 .custom-class {
   --el-tag-bg-color: red;
 }
 
+.highlight-row {
+  background-color: #f5f5f5 !important;
+}
 </style>
