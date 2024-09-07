@@ -31,7 +31,6 @@ import { ElMessage } from 'element-plus'
 
 
 const router=useRouter()
-// do not use same name with ref
 
 const ruleFormRef = ref(null)
 
